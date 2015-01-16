@@ -78,7 +78,7 @@ class Middleman::Extensions::MinifyJavascript < ::Middleman::Extension
         if first =~ /<script>/ || first.include?('text/javascript')
           minified_js = @compressor.compress(javascript)
 
-          first << minified_js << last
+          first.strip << minified_js << last.strip
         else
           match
         end

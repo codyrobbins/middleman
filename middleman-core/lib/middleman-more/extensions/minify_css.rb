@@ -50,7 +50,7 @@ class Middleman::Extensions::MinifyCss < ::Middleman::Extension
       if inline_html_content?(env['PATH_INFO'])
         minified = ::Middleman::Util.extract_response_text(response)
         minified.gsub!(INLINE_CSS_REGEX) do
-          $1 << @compressor.compress($2) << $3
+          $1.strip << @compressor.compress($2) << $3.strip
         end
 
         headers['Content-Length'] = ::Rack::Utils.bytesize(minified).to_s
