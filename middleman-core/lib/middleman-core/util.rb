@@ -161,7 +161,7 @@ module Middleman
         # set :relative_links, true
         # but still override on a case by case basis with the :relative parameter.
         effective_relative = relative || false
-        effective_relative = true if relative.nil? && app.config[:relative_links]
+        effective_relative = true if relative.nil? && app.config[:relative_links] && !uri.host
 
         # Try to find a sitemap resource corresponding to the desired path
         this_resource = options[:current_resource]
