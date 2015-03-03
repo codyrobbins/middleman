@@ -107,11 +107,11 @@ Constraint][pvc] with two digits of precision. For example:
     spec.add_dependency 'middleman-core', '~> 3.0'
 
 [semver]: http://semver.org/
-[pvc]: http://docs.rubygems.org/read/chapter/16#page74
+[pvc]: http://guides.rubygems.org/patterns/#pessimistic-version-constraint
 
 ## License
 
-Copyright (c) 2010-2013 Thomas Reynolds. MIT Licensed, see [LICENSE] for details.
+Copyright (c) 2010-2015 Thomas Reynolds. MIT Licensed, see [LICENSE] for details.
 
 [middleman]: http://middlemanapp.com
 [gem]: https://rubygems.org/gems/middleman
